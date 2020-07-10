@@ -1,0 +1,29 @@
+package PK26.treeset;
+
+import PK26.Member;
+import PK26.hashset.MemberHashSet;
+
+public class MemberTreeSetTest {
+	public static void main(String[] args) {
+MemberTreeSet memberTreeSet=new MemberTreeSet();
+		
+		Member memberPark=new Member(1003,"박서원");
+		Member memberLee=new Member(1001,"이지원");
+		Member memberSon=new Member(1002,"손민국");
+		
+		
+		memberTreeSet.addMember(memberLee); 
+		memberTreeSet.addMember(memberSon);
+		memberTreeSet.addMember(memberPark);
+		memberTreeSet.showAllMember();
+		System.out.println("----------------------");
+		
+		//객체 추가 (중복아이디)
+		Member memberHong =new Member(1003,"홍길동"); //1003 memberId 중복
+		memberTreeSet.addMember(memberHong);
+		memberTreeSet.showAllMember();
+		
+	
+	}
+
+}
